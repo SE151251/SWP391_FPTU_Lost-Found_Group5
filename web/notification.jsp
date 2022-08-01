@@ -122,26 +122,31 @@
     <div id="header-carousel" class="carousel slide mt-3" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" style="height: 410px;">
-                <img class="img-fluid" src="images/Logo_LostFound.png" alt="Image">
-                
+                <img class="img-fluid" src="images/fptHcm.png" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-end">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h2 class="text-uppercase font-weight-medium mb-3">FPTU Lost & Found</h2>
+                        <h4 class="display-4 text-white font-weight-semi-bold mb-4">The easy way to find your lost items</h4>
+                    </div>
+                </div>
             </div>
             <div class="carousel-item " style="height: 410px;">
                 <img class="img-fluid" src="images/fptHcm.png" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-end">
                     <div class="p-3" style="max-width: 700px;">
-                        <h4 class="text-uppercase font-weight-medium mb-3">FPTU Lost&Found</h4>
-                        <h3 class="display-4 text-white font-weight-semi-bold mb-4">The easy way to find your items</h3>
+                        <h2 class="text-uppercase font-weight-medium mb-3">FPTU Lost & Found</h2>
+                        <h4 class="display-4 text-white font-weight-semi-bold mb-4">A place where you help those who have lost their belongings</h4>
                     </div>
                 </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-            <div class="btn btn-primary" style="width: 45px; height: 35px;">
+            <div class="btn btn-primary" style="width: 45px; height: 45px;">
                 <span class="carousel-control-prev-icon mb-n2"></span>
             </div>
         </a>
         <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-            <div class="btn btn-primary" style="width: 45px; height: 35px;">
+            <div class="btn btn-primary" style="width: 45px; height: 45px;">
                 <span class="carousel-control-next-icon mb-n2"></span>
             </div>
         </a>
@@ -214,125 +219,9 @@
 
     </div>
     <!-- Footer -->
-    <footer class=" text-center text-lg-start bg-light text-muted">
-        <!-- Section: Social media -->
-        <section class="text-white d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block">
-                <span>Get connected with us on social networks:</span>
-            </div>
-            <!-- Left -->
-
-            <!-- Right -->
-            <div>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f text-white"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter text-white"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-google text-white"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram text-white"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-github text-white"></i>
-                </a>
-            </div>
-            <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="text-white">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3 mr-1"></i>FPTU Lost&Found
-                        </h6>
-                        <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum
-                            dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Products
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-white">Angular</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">React</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Vue</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Laravel</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-white">Pricing</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Settings</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Orders</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Help</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Contact
-                        </h6>
-                        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            info@example.com
-                        </p>
-                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div class="text-center text-white p-4">
-            © 2022 Copyright:
-            <a class="text-reset text-white fw-bold" href="https://mdbootstrap.com/">Group 5</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+    <footer>
+            <%@include file="footer.jsp" %>
+        </footer>
     <!-- Footer -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->

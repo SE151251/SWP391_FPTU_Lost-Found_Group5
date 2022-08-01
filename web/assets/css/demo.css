@@ -106,7 +106,36 @@
   margin-top: 1rem;
 }
 .about-img img{
-    height: 380px;
-    width: 380px;
+    height: 466.13px;
+    width: 466.13px;
     border: 3px solid #56CCF2;
+}
+.pane-img img{  
+    height: 466.13px;
+    width: 466.13px;
+  transition: .5s;
+  display: inline-block;
+  position: relative;
+
+}
+
+.createPost--btn{
+  padding: 5px 15px 5px 15px;
+  font-size: 24px;
+  font-weight: 900;
+  color:white;
+  position: absolute;
+      left: 15%;
+    top: 28%;
+  
+}
+.createPost--btn:hover{
+  color:white;
+  opacity: 80%;
+}
+.icon-card-dashboard{
+    display: inline-block;
+    position: absolute;
+    top:40%;
+    right: 10%;
 }

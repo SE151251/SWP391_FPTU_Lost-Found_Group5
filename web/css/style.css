@@ -16,7 +16,7 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
+
   max-width: 100%;
 }
 input,
@@ -189,7 +189,7 @@ background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, F
 }
 #Navbar{
   position: fixed;
-  margin-left: 83.85%;
+  margin-left: 84.85%;
   z-index: 5;
   margin-top: 12px;
   background: #56CCF2;  /* fallback for old browsers */
@@ -347,14 +347,16 @@ display: none;
   opacity: 0.7;
 }
 .pane-img img{  
-    height: 370px;
-    width: 370px;
+    height: 466.13px;
+    width: 466.13px;
   transition: .5s;
   display: inline-block;
   position: relative;
   object-fit: contain;
 }
 .pane-img{
+   height: 466.13px;
+    width: 466.13px;
   overflow: hidden;
   /* border-bottom: dashed 1px rgb(0, 247, 255) */
 }

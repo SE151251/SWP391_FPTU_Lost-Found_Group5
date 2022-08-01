@@ -102,7 +102,7 @@ public class MemberDAO {
         return false;
     }
     public ArrayList<Member> findMemberByName(String mName) throws SQLException, Exception {
-        String sql = "SELECT * FROM Member WHERE FullName like ?"; 
+        String sql = "SELECT * FROM Member WHERE MemberRole =1 and FullName like ?"; 
         ArrayList<Member> listmem = new ArrayList<>();
         try {
             con = DBUtils.makeConnection(); 

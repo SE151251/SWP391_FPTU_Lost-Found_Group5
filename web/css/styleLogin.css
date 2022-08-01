@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .hero-image {
+    background-image: url("../images/fptHcm.png");
+    background-color: #cccccc;
+    height: 954px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hero-text {
+    text-align: center;
+    margin-top:60%;
+    
+  }
+  .hero-text >a {
+      text-decoration: none;
+      color: white;
+  }
+  .title{
+    color: white;
+    font-weight: 700;
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 70%;
+    transform: translateX(20%);
+    border-radius: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+.btn{
+  padding: 1px 16px 1px 16px;
+}
+.btn-logo{
+  margin-right: 5px;
+}

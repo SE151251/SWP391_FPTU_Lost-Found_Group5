@@ -31,6 +31,8 @@ public class CreateCommentServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
         try {
             HttpSession session = request.getSession(false);
             if (session == null) {
