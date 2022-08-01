@@ -645,8 +645,8 @@ public class ArticleDAO {
             if (con != null) {
                 String sql = "select A.ArticleID, A.ArticleTitle, A.ArticleContent, A.ImgURL, A.PostTime, A.ArticleStatus, A.WarningStatus, A.MemberID, A.ArticleTypeID, A.ItemID \n" +
                             "from Article A inner join ArticleType AType on A.ArticleTypeID = AType.ArticleTypeID\n" +                          
-                            "Where A.ArticleTypeID = 1 and A.ArticleStatus =1 and A.ArticleContent Like ?\n" +
-                            "Order By PostTime DESC";
+                            "Where A.ArticleTypeID = 1 and A.ArticleStatus =1 and A.ArticleTitle Like ?\n" +
+                            "Order By A.ArticleID DESC";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, "%"+key+"%");
                 rs = stm.executeQuery();
@@ -692,8 +692,8 @@ public class ArticleDAO {
             if (con != null) {
                 String sql = "select A.ArticleID, A.ArticleTitle, A.ArticleContent, A.ImgURL, A.PostTime, A.ArticleStatus, A.WarningStatus, A.MemberID, A.ArticleTypeID, A.ItemID \n" +
                             "from Article A inner join ArticleType AType on A.ArticleTypeID = AType.ArticleTypeID\n" +                          
-                            "Where A.ArticleTypeID = 2 and A.ArticleStatus = 1 and A.ArticleContent Like ?\n" +
-                            "Order By PostTime DESC";
+                            "Where A.ArticleTypeID = 2 and A.ArticleStatus = 1 and A.ArticleTitle Like ?\n" +
+                            "Order By A.ArticleTypeID DESC";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, "%"+key+"%");
                 rs = stm.executeQuery();
@@ -739,8 +739,8 @@ public class ArticleDAO {
             if (con != null) {
                 String sql = "select A.ArticleID, A.ArticleTitle, A.ArticleContent, A.ImgURL, A.PostTime, A.ArticleStatus, A.WarningStatus, A.MemberID, A.ArticleTypeID, A.ItemID \n" +
                             "from Article A inner join ArticleType AType on A.ArticleTypeID = AType.ArticleTypeID\n" +                          
-                            "Where A.ArticleTypeID = 3 and A.ArticleStatus = 1 and A.ArticleContent Like ?\n" +
-                            "Order By PostTime DESC";
+                            "Where A.ArticleTypeID = 3 and A.ArticleStatus = 1 and A.ArticleTitle Like ?\n" +
+                            "Order By A.ArticleID DESC";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, "%"+key+"%");
                 rs = stm.executeQuery();
@@ -1084,18 +1084,19 @@ public class ArticleDAO {
     }
 
     public ArrayList<Article> getPaging(int index) throws Exception {
-        ArrayList<Article> lb = new ArrayList<>();
+        ArrayList<Article> lb = null;
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
                 String sql = "Select * from Article\n"
                         + "Where ArticleTypeID = 1 and ArticleStatus = 1\n"
-                        + "order by PostTime DESC \n"
+                        + "order by ArticleID DESC \n"
                         + "OFFSET ? ROWS\n"
                         + "FETCH FIRST 12 ROWS ONLY;";
-                stm = con.prepareStatement(sql);
-                stm.setInt(1, (index - 1) * 10);
+                stm = con.prepareStatement(sql);       
+                stm.setInt(1, (index - 1) * 12);
                 rs = stm.executeQuery();
+                lb = new ArrayList<>();
                 while (rs.next()) {
                     int articleId = rs.getInt("ArticleID");
                     String articleTitle = rs.getString("ArticleTitle");
@@ -1168,11 +1169,11 @@ public class ArticleDAO {
             if (con != null) {
                 String sql = "Select * from Article\n"
                         + "Where ArticleTypeID = 2  and ArticleStatus = 1\n "
-                        + "order by PostTime DESC \n"
+                        + "order by ArticleID DESC \n"
                         + "OFFSET ? ROWS\n"
                         + "FETCH FIRST 12 ROWS ONLY;";
                 stm = con.prepareStatement(sql);
-                stm.setInt(1, (index - 1) * 10);
+                stm.setInt(1, (index - 1) * 12);
                 rs = stm.executeQuery();
                 while (rs.next()) {
                     int articleId = rs.getInt("ArticleID");
@@ -1246,11 +1247,11 @@ public class ArticleDAO {
             if (con != null) {
                 String sql = "Select * from Article\n"
                         + "Where ArticleTypeID = 3 and ArticleStatus = 1 \n"
-                        + "order by PostTime DESC \n"
+                        + "order by ArticleID DESC \n"
                         + "OFFSET ? ROWS\n"
                         + "FETCH FIRST 12 ROWS ONLY;";
                 stm = con.prepareStatement(sql);
-                stm.setInt(1, (index - 1) * 10);
+                stm.setInt(1, (index - 1) * 12);
                 rs = stm.executeQuery();
                 while (rs.next()) {
                     int articleId = rs.getInt("ArticleID");

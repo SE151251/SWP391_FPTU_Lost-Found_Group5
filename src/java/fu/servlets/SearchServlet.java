@@ -37,7 +37,7 @@ public class SearchServlet extends HttpServlet {
      private static final String ADMIN_NOTICE = "listPostAdmin.jsp";
     private static final String ADMIN = "AdminListServlet";
     private static final String MEMBER_LIST = "listMember.jsp";
-    private static final String LOGIN = "login.jsp";
+    private static final String LOGIN = "paging.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

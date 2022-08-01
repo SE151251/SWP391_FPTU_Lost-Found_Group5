@@ -90,7 +90,7 @@ public class WarningMemberServlet extends HttpServlet {
                             memberWarn.setMemberCount(memberWarn.getMemberCount() + 1);
                             mdao.warningMember(memberWarn);
                             // Tạo thông báo
-                            String notiContent = "Your account has been WARNED by ADMIN";
+                            String notiContent = "Your account has been WARNED "+memberWarn.getMemberCount()+" times by ADMIN";
                             ndao.addNewNotifications(new Notification(0, member, memberWarn, null, notiContent, LocalDateTime.now().toString(), 1));
                             JavaMailUtil.sendMail(memberWarn.getMemberEmail(), "Your account has been WARNED by ADMIN");
                             url = LIST_MEMBERS_PAGE;

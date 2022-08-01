@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-  <jsp:useBean id="a" class="fu.daos.ArticleDAO" scope="request"></jsp:useBean>
+  <jsp:useBean id="a" class="fu.daos.ArticleDAO" scope="request"></jsp:useBean> 
 </head>
 
 <body>
@@ -210,7 +210,7 @@
                 </div>
             </a>
             </c:forEach>           
-            <nav aria-label="...">
+        <nav aria-label="...">
             <ul class ="pagination pagination-lg mt-3">
                 <c:forEach begin="1" end="${a.numberPage}" var="i">
                     <li class="page-item ${indexPage==i?"active":""}"><a class="page-link" href="paging?index=${i}">${i}</a></li>
