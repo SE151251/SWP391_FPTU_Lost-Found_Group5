@@ -1090,7 +1090,7 @@ public class ArticleDAO {
             if (con != null) {
                 String sql = "Select * from Article\n"
                         + "Where ArticleTypeID = 1 and ArticleStatus = 1\n"
-                        + "order by ArticleID DESC \n"
+                        + "order by PostTime DESC \n"
                         + "OFFSET ? ROWS\n"
                         + "FETCH FIRST 12 ROWS ONLY;";
                 stm = con.prepareStatement(sql);       
@@ -1169,7 +1169,7 @@ public class ArticleDAO {
             if (con != null) {
                 String sql = "Select * from Article\n"
                         + "Where ArticleTypeID = 2  and ArticleStatus = 1\n "
-                        + "order by ArticleID DESC \n"
+                        + "order by PostTime DESC \n"
                         + "OFFSET ? ROWS\n"
                         + "FETCH FIRST 12 ROWS ONLY;";
                 stm = con.prepareStatement(sql);
@@ -1247,7 +1247,7 @@ public class ArticleDAO {
             if (con != null) {
                 String sql = "Select * from Article\n"
                         + "Where ArticleTypeID = 3 and ArticleStatus = 1 \n"
-                        + "order by ArticleID DESC \n"
+                        + "order by PostTime DESC \n"
                         + "OFFSET ? ROWS\n"
                         + "FETCH FIRST 12 ROWS ONLY;";
                 stm = con.prepareStatement(sql);

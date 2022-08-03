@@ -64,8 +64,8 @@ public class PaginControl1 extends HttpServlet {
                     request.setAttribute("indexPage1", indexPage);               
                     List<Item> listI = itDao.getAllItems();
                     request.setAttribute("ListItemType", listI);                   
-                    List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                    request.setAttribute("listAH", listAH);
+                    //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                    //request.setAttribute("listAH", listAH);
                     request.getRequestDispatcher("homeReturn.jsp").forward(request, response);
                 } else if (index1 != null) {
                     int indexPage = Integer.parseInt(index1);                  
@@ -74,8 +74,8 @@ public class PaginControl1 extends HttpServlet {
                     request.setAttribute("indexPage1", indexPage);                   
                     List<Item> listI = itDao.getAllItems();
                     request.setAttribute("ListItemType", listI);                  
-                    List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                    request.setAttribute("listAH", listAH);
+                    //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                    //request.setAttribute("listAH", listAH);
                     request.getRequestDispatcher("homeReturn.jsp").forward(request, response);
                 }
 //            } else {

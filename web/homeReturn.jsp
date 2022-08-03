@@ -195,13 +195,13 @@
                             <h5 class="card-title"><c:out value="${dt.title}"/></h5>
                             <p class="card-text">Time: <c:out value="${dt.postTime}"/></p>
                             <a href="SearchServlet?txtItem=${dt.item.itemID}&searchAction=Return">    <p><span style="padding: 5px 10px 5px 10px" class="badge badge-pill badge-primary"><c:out value="${dt.item.itemName}"/></span></p>   </a> 
-                            <p class="card-text">
-                                 <c:forEach var="lah" items="${listAH}" >
+                         <%--   <p class="card-text">
+                    <c:forEach var="lah" items="${listAH}" >
                         <c:if test="${dt.articleID eq lah.article.articleID}">
                         <span><a href="SearchServlet?hId=${lah.hashtag.hashtagID}&searchAction=Return"><c:out value="${lah.hashtag.hashtagName}"/></a></span>
                         </c:if>    
                     </c:forEach> 
-                            </p>
+                            </p>--%>
 
                         </div>
                     </div>

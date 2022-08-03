@@ -60,7 +60,7 @@ public class SearchServlet extends HttpServlet {
                         // if (memberLogin.getMemberRole() == 1) {
                         ArticleDAO adao = new ArticleDAO();
                         ItemTypeDAO iDao = new ItemTypeDAO();
-                        ArticleHashtagDAO ahDao = new ArticleHashtagDAO();
+                        //ArticleHashtagDAO ahDao = new ArticleHashtagDAO();
                         // search theo filter
                         if (itemId != null) {
                             if (searchAction.equals("Find")) {
@@ -70,8 +70,8 @@ public class SearchServlet extends HttpServlet {
                                 List<Item> listI = iDao.getAllItems();
                                 request.setAttribute("ListItemType", listI);
 
-                                List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                                request.setAttribute("listAH", listAH);
+                                //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                                //request.setAttribute("listAH", listAH);
                                 uri = HOME_FIND;
                             } else if (searchAction.equals("Return")) {
 
@@ -81,8 +81,8 @@ public class SearchServlet extends HttpServlet {
                                 List<Item> listI = iDao.getAllItems();
                                 request.setAttribute("ListItemType", listI);
 
-                                List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                                request.setAttribute("listAH", listAH);
+                                //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                                //request.setAttribute("listAH", listAH);
                                 uri = HOME_RETURN;
                             } else if (searchAction.equals("Notice")) {
                                 Item i = iDao.getItemByID(Integer.parseInt(itemId));
@@ -90,8 +90,8 @@ public class SearchServlet extends HttpServlet {
                                 request.setAttribute("articlesFind", listArtsFind);
                                 List<Item> listI = iDao.getAllItems();
                                 request.setAttribute("ListItemType", listI);
-                                List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                                request.setAttribute("listAH", listAH);
+                                //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                                //request.setAttribute("listAH", listAH);
                                 uri = HOME_FIND;
                             }
                         } else if (key != null) {
@@ -103,8 +103,8 @@ public class SearchServlet extends HttpServlet {
                                 List<Item> listI = iDao.getAllItems();
                                 request.setAttribute("ListItemType", listI);
 
-                                List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                                request.setAttribute("listAH", listAH);
+                                //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                                //request.setAttribute("listAH", listAH);
                                 uri = HOME_FIND;
                             } else if (searchAction.equals("Return")) {
                                 List<Article> listArtsReturn = adao.searchAllArticlesReturnByName(key);
@@ -113,8 +113,8 @@ public class SearchServlet extends HttpServlet {
                                 List<Item> listI = iDao.getAllItems();
                                 request.setAttribute("ListItemType", listI);
 
-                                List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                                request.setAttribute("listAH", listAH);
+                                //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                               // request.setAttribute("listAH", listAH);
                                 uri = HOME_RETURN;
                             } else if (searchAction.equals("Notice")) {
                                 List<Article> listArtsShare = adao.searchAllArticlesNoticeByName(key);
@@ -123,8 +123,8 @@ public class SearchServlet extends HttpServlet {
                                 List<Item> listI = iDao.getAllItems();
                                 request.setAttribute("ListItemType", listI);
 
-                                List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                                request.setAttribute("listAH", listAH);
+                                //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                               // request.setAttribute("listAH", listAH);
                                 if(memberLogin.getMemberRole() == 1){
                                 uri = HOME_NOTICE;
                                 }
@@ -141,8 +141,8 @@ public class SearchServlet extends HttpServlet {
                                 List<Item> listI = iDao.getAllItems();
                                 request.setAttribute("ListItemType", listI);
 
-                                List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                                request.setAttribute("listAH", listAH);
+                               // List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                                //request.setAttribute("listAH", listAH);
                                 uri = HOME_FIND;
                             } else if (searchAction.equals("Return")) {
                                 List<Article> listArtsReturn = adao.searchAllArticlesReturnByHashtag(hId);
@@ -151,8 +151,8 @@ public class SearchServlet extends HttpServlet {
                                 List<Item> listI = iDao.getAllItems();
                                 request.setAttribute("ListItemType", listI);
 
-                                List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                                request.setAttribute("listAH", listAH);
+                                //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                               // request.setAttribute("listAH", listAH);
                                 uri = HOME_RETURN;
                             } else if (searchAction.equals("Notice")) {
                                 List<Article> listArtsShare = adao.searchAllArticlesNoticeByHashtag(hId);
@@ -161,8 +161,8 @@ public class SearchServlet extends HttpServlet {
                                 List<Item> listI = iDao.getAllItems();
                                 request.setAttribute("ListItemType", listI);
 
-                                List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                                request.setAttribute("listAH", listAH);
+                                //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                               // request.setAttribute("listAH", listAH);
                                 uri = HOME_NOTICE;
 
                             }
@@ -184,7 +184,7 @@ public class SearchServlet extends HttpServlet {
                 String searchAction = request.getParameter("searchAction");
                 ArticleDAO adao = new ArticleDAO();
                 ItemTypeDAO iDao = new ItemTypeDAO();
-                ArticleHashtagDAO ahDao = new ArticleHashtagDAO();
+                //ArticleHashtagDAO ahDao = new ArticleHashtagDAO();
                 // search theo filter
                 if (itemId != null) {
                     if (searchAction.equals("Find")) {
@@ -194,8 +194,8 @@ public class SearchServlet extends HttpServlet {
                         List<Item> listI = iDao.getAllItems();
                         request.setAttribute("ListItemType", listI);
 
-                        List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                        request.setAttribute("listAH", listAH);
+                        //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                        //request.setAttribute("listAH", listAH);
                         uri = HOME_FIND;
                     } else if (searchAction.equals("Return")) {
 
@@ -205,8 +205,8 @@ public class SearchServlet extends HttpServlet {
                         List<Item> listI = iDao.getAllItems();
                         request.setAttribute("ListItemType", listI);
 
-                        List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                        request.setAttribute("listAH", listAH);
+                        //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                        //request.setAttribute("listAH", listAH);
                         uri = HOME_RETURN;
                     } else if (searchAction.equals("Notice")) {
                         Item i = iDao.getItemByID(Integer.parseInt(itemId));
@@ -214,8 +214,8 @@ public class SearchServlet extends HttpServlet {
                         request.setAttribute("articlesFind", listArtsFind);
                         List<Item> listI = iDao.getAllItems();
                         request.setAttribute("ListItemType", listI);
-                        List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                        request.setAttribute("listAH", listAH);
+                        //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                        //request.setAttribute("listAH", listAH);
                         uri = HOME_FIND;
                     }
                 } else if (key != null) {
@@ -227,8 +227,8 @@ public class SearchServlet extends HttpServlet {
                         List<Item> listI = iDao.getAllItems();
                         request.setAttribute("ListItemType", listI);
 
-                        List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                        request.setAttribute("listAH", listAH);
+                        //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                        //request.setAttribute("listAH", listAH);
                         uri = HOME_FIND;
                     } else if (searchAction.equals("Return")) {
                         List<Article> listArtsReturn = adao.searchAllArticlesReturnByName(key);
@@ -237,8 +237,8 @@ public class SearchServlet extends HttpServlet {
                         List<Item> listI = iDao.getAllItems();
                         request.setAttribute("ListItemType", listI);
 
-                        List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                        request.setAttribute("listAH", listAH);
+                        //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                        //request.setAttribute("listAH", listAH);
                         uri = HOME_RETURN;
                     } else if (searchAction.equals("Notice")) {
                         List<Article> listArtsShare = adao.searchAllArticlesNoticeByName(key);
@@ -247,8 +247,8 @@ public class SearchServlet extends HttpServlet {
                         List<Item> listI = iDao.getAllItems();
                         request.setAttribute("ListItemType", listI);
 
-                        List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                        request.setAttribute("listAH", listAH);
+                        //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                        //request.setAttribute("listAH", listAH);
                         uri = HOME_NOTICE;
                     }
                 } //search theo hashtag
@@ -260,8 +260,8 @@ public class SearchServlet extends HttpServlet {
                         List<Item> listI = iDao.getAllItems();
                         request.setAttribute("ListItemType", listI);
 
-                        List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                        request.setAttribute("listAH", listAH);
+                        //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                        //request.setAttribute("listAH", listAH);
                         uri = HOME_FIND;
                     } else if (searchAction.equals("Return")) {
                         List<Article> listArtsReturn = adao.searchAllArticlesReturnByHashtag(hId);
@@ -270,8 +270,8 @@ public class SearchServlet extends HttpServlet {
                         List<Item> listI = iDao.getAllItems();
                         request.setAttribute("ListItemType", listI);
 
-                        List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                        request.setAttribute("listAH", listAH);
+                        //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                        //request.setAttribute("listAH", listAH);
                         uri = HOME_RETURN;
                     } else if (searchAction.equals("Notice")) {
                         List<Article> listArtsShare = adao.searchAllArticlesNoticeByHashtag(hId);
@@ -280,8 +280,8 @@ public class SearchServlet extends HttpServlet {
                         List<Item> listI = iDao.getAllItems();
                         request.setAttribute("ListItemType", listI);
 
-                        List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                        request.setAttribute("listAH", listAH);
+                        //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                        //request.setAttribute("listAH", listAH);
                         uri = HOME_NOTICE;
 
                     }

@@ -72,8 +72,8 @@ public class PaginControl extends HttpServlet {
                     List<Item> listI = itDao.getAllItems();
                     request.setAttribute("ListItemType", listI);
 
-                    List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                    request.setAttribute("listAH", listAH);
+                    //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                    //request.setAttribute("listAH", listAH);
                                        
                     request.getRequestDispatcher("home.jsp").forward(request, response);
                 } else if (index != null) {
@@ -86,8 +86,8 @@ public class PaginControl extends HttpServlet {
                     List<Item> listI = itDao.getAllItems();
                     request.setAttribute("ListItemType", listI);
 
-                    List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                    request.setAttribute("listAH", listAH);
+                    //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                    //request.setAttribute("listAH", listAH);
                     request.getRequestDispatcher("home.jsp").forward(request, response);
                 }
 //            } else {

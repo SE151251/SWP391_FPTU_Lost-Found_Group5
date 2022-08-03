@@ -70,8 +70,8 @@ public class PaginControl2 extends HttpServlet {
                     List<Item> listI = itDao.getAllItems();
                     request.setAttribute("ListItemType", listI);
                     
-                    List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                    request.setAttribute("listAH", listAH);
+                    //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                    //request.setAttribute("listAH", listAH);
                     if (url != null) {
                         request.getRequestDispatcher(url).forward(request, response);
                     } else {
@@ -87,8 +87,8 @@ public class PaginControl2 extends HttpServlet {
                     List<Item> listI = itDao.getAllItems();
                     request.setAttribute("ListItemType", listI);
                     
-                    List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
-                    request.setAttribute("listAH", listAH);
+                    //List<ArticleHashTag> listAH = ahDao.getAllArticleHashtag();
+                    //request.setAttribute("listAH", listAH);
                     if (url != null) {
                         request.getRequestDispatcher(url).forward(request, response);
                     } else {

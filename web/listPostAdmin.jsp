@@ -222,13 +222,13 @@
                                                 <div class="card-body pane-content">
                                                         <h5 class="card-title"><c:out value="${dt.title}"/></h5>
                                                     <p class="card-text">Time: <c:out value="${dt.postTime}"/></p>                           
-                                                    <p class="card-text">
+                                                <%--    <p class="card-text">
                                                         <c:forEach var="lah" items="${listAH}" >
                                                             <c:if test="${dt.articleID eq lah.article.articleID}">
                                                                 <span><a href="SearchServlet?hId=${lah.hashtag.hashtagID}&searchAction=Notice"><c:out value="${lah.hashtag.hashtagName}"/></a></span>
                                                                 </c:if>    
                                                             </c:forEach> 
-                                                    </p>
+                                                    </p> --%>
 
                                                 </div>
                                             
