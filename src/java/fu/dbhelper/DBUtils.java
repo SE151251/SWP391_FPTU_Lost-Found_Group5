@@ -18,7 +18,7 @@ public class DBUtils {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String url = "jdbc:sqlserver://localhost:1433;databaseName=FPTU_Lost_and_Found";
-            Connection con = DriverManager.getConnection(url, "sa", "25032001");
+            Connection con = DriverManager.getConnection(url, "sa", "25032001");// Change with your password here
             return con;
         
         } catch (ClassNotFoundException e) {

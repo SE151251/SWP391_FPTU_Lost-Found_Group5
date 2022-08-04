@@ -17,14 +17,14 @@ import java.util.Properties;
  *
  * @author LENOVO
  */
-//xuggbomysecmyskh
-//       String myAccountEmail="lostfoundsystemswp391@gmail.com";
-//        String password="SWP391@LostAndFound@Group5";
+//xuggbomysecmyskh -- Đây pass của ứng dụng được tạo để bởi gmail để dùng chức năng send mail
+//       String myAccountEmail="lostfoundsystemswp391@gmail.com"; -- Đây là tài khoản gmail được dùng để thực hiện chức năng send mail
+//        String password="SWP391@LostAndFound@Group5"; -- Password của email
 public class JavaMailUtil {
 public static void sendMail(String receiverEmail, String reason) {
 
-        final String username = "lostfoundsystemswp391@gmail.com";
-        final String password = "xuggbomysecmyskh";
+        final String username = "lostfoundsystemswp391@gmail.com";// Hãy thay thế bằng tài khoản gmail của bạn
+        final String password = "xuggbomysecmyskh"; // Thay đổi mật khẩu theo gmail của bạn đã tạo 
 
         Properties prop = new Properties();
 		prop.put("mail.smtp.host", "smtp.gmail.com");
@@ -41,7 +41,8 @@ public static void sendMail(String receiverEmail, String reason) {
 
         try {
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("lostfoundsystemswp391@gmail.com"));
+            message.setFrom(new InternetAddress("lostfoundsystemswp391@gmail.com"));// Hãy thay thế bằng tài khoản gmail của bạn giống ở trên
+            
             message.setRecipients(
                     Message.RecipientType.TO,
                     InternetAddress.parse(receiverEmail)
@@ -56,7 +57,8 @@ public static void sendMail(String receiverEmail, String reason) {
             //System.out.println("Done");
 
         } catch (MessagingException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("Error at JavaMailUtil in package SendMail. Please check your account and password again. Send mail fail!");
         }
     }
 }
